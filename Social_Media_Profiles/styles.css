@@ -1,0 +1,564 @@
+body {
+    background-image: url("background1.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Navigation bar styling */
+.navbar {
+    background-image: url('blue-banner.jpeg');
+    /* Path to your image */
+    background-size: cover;
+    /* Make the image cover the entire navbar */
+    background-repeat: no-repeat;
+    /* Avoid repeating the image */
+    background-position: center;
+    /* Center the image */
+    height: 120px;
+    /* Adjust height based on your needs */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    /* Ensure brand is aligned left */
+    align-items: center;
+}
+
+.navbar .d-flex {
+    justify-content: center;
+}
+
+.navbar .d-flex form {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    /* You can adjust this value to control the width of the search form */
+}
+
+.title {
+    color: white;
+    width: 50%;
+    margin-left: 30px;
+}
+
+h3 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #cccccc;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.navbar .form-control {
+    border-radius: 20px;
+    padding: 10px 15px;
+}
+
+.navbar .btn-outline-light {
+    border-radius: 20px;
+    padding: 8px 20px;
+}
+
+.required{
+    color: red;
+    font-weight: bold;
+}
+
+/*Filter and reset filters buttons*/
+/* Common styles for both buttons */
+#filterButton,
+#resetButton {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Specific styles for the Filter button */
+#filterButton {
+    background-color: #007bff;
+    color: white;
+}
+
+#filterButton:hover {
+    background-color: #0056b3;
+}
+
+/* Specific styles for the Reset button */
+#resetButton {
+    background-color: #007bff;
+    color: black;
+}
+
+#resetButton:hover {
+    background-color: #0056b3;
+}
+
+/*Download and add user buttons styling*/
+
+.extraButtons {
+    display: flex;
+    /* Use flexbox to arrange buttons */
+    justify-content: flex-end;
+    /* Align buttons to the right */
+    gap: 15px;
+    margin-right: 60px;
+    /* Add some space between the buttons */
+}
+
+.extraButtons button {
+    padding: 10px 20px;     /* Add padding to the buttons */
+    font-size: 16px;     /* Adjust font size */
+    border-radius: 25px;    /* Optional: rounded corners */
+    border: 1px solid #007bff;    /* Optional: border color */
+    background-color: #007bff;    /* Background color */
+    color: white;    /* Text color */
+    cursor: pointer;    /* Make the button cursor pointer */
+    transition: background-color 0.3s ease;    /* Smooth transition */
+}
+
+/* Hover effect */
+.extraButtons button:hover {
+    background-color: #0056b3;    /* Darker blue on hover */
+}
+
+/*profilesection*/
+#profilesection .dropdown-menu {
+    right: 0;
+    left: auto;
+}
+
+#filtersection {
+    margin-top: 30px;
+}
+
+tr.odd-row {
+    background-color: #f4f5f5a6 !important;
+    /* Using !important to enforce the rule */
+}
+
+tr.even-row {
+    background-color: #ffffff !important;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table.dataTable thead th {
+    background-color: #f1f1f1;
+    color: #333;
+    font-weight: bold;
+}
+
+table tr:hover {
+    background-color: rgba(60, 16, 42, 0.868) !important;
+    color: white;
+    transform: scale(1.05);    /* Slightly increase the row size */
+    transition: transform 0.2s ease, background-color 0.2s ease;    /* Smooth transition */
+}
+
+table tr {
+    transition: transform 0.2s ease;    /* Transition for row scaling */
+}
+
+.close-btn {
+    text-align: right;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    color: #1a4068;
+}
+
+.rights {
+    margin-top: 40px;
+    bottom: 0;
+    /* Positions it at the bottom */
+    left: 0;
+    /* Aligns to the left of the page */
+    width: 100%;
+    /* Makes the bar full width */
+    background-color: #333;
+    /* Dark background color */
+    color: white;
+    /* White text */
+    text-align: center;
+    /* Center-aligns the text */
+    padding: 10px 0;
+    /* Adds vertical padding */
+}
+
+/* Form container styling */
+form#addForm, form#editForm {
+    max-width: 500px;
+    max-height: 80vh; /* Max height of the window */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    background-color: rgb(175, 194, 223);
+    /* Clean white background */
+    padding: 25px 20px;
+    /* Consistent padding */
+    border-radius: 8px;
+    /* Slightly rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    /* Subtle shadow for depth */
+    max-width: 360px;
+    /* Adjusted for better proportion */
+    width: 100%;
+    /* Responsive */
+    border: 1px solid #033a75;
+    /* Blue border */
+    margin: auto;
+    /* Center the form in its container */
+}
+
+/* Form labels */
+.form-label {
+    font-weight: 600;
+    color: #144374;
+    /* Blue for labels */
+    margin-bottom: 6px;
+    display: block;
+    /* Ensures proper spacing */
+}
+
+/* Input fields */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #d1d1d1;
+    /* Soft gray border */
+    border-radius: 4px;
+    /* Slightly rounded */
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #03203f;
+    /* Blue border on focus */
+    outline: none;
+    /* Removes outline */
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+    /* Gentle blue glow */
+}
+
+
+/* Spacing between fields */
+.mb-3 {
+    margin-bottom: 16px;
+    /* Standardized spacing */
+}
+
+/* Container with flexbox layout to align items in a row */
+.container-fluid {
+    padding: 20px;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+/* Ensure there is space between each item */
+.d-flex .btn,
+.d-flex .form-select {
+    margin-left: 10px;
+}
+
+/* Button spacing for proper alignment */
+.d-flex .btn {
+    margin-left: 10px;
+}
+
+/* Ensuring select dropdowns for filters are aligned horizontally */
+.d-flex select {
+    margin-right: 10px;
+}
+
+/*Buttons Styling*/
+button#exportButton,
+#AddUser,
+#filterButton,
+#resetButton {
+    background-color: #007bff;
+    /* Green color for positive actions */
+    border: none;
+    color: #fff;
+    padding: 10px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;    /* Rounded corners for a modern look */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;    /* Smooth transition on hover */
+}
+
+#exportButton:hover,
+#AddUser:hover ,
+#downloadPdfButton:hover{
+    background-color: #218838;    /* Darker green on hover */
+    transform: scale(1.05);    /* Slight zoom effect when hovering */
+}
+
+#exportButton:active,
+#AddUser:active
+#downloadPdfButton:active {
+    background-color: #1e7e34;    /* Even darker green when the button is clicked */
+    transform: scale(1);    /* Remove zoom effect on click */
+}
+
+#exportButton:focus,
+#AddUser:focus 
+#downloadPdfButton:focus{
+    outline: none;    /* Remove the outline on focus for cleaner UI */
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);    /* Focus ring effect */
+}
+
+.title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #ffffff !important;
+}
+
+.navbar .form-control {
+    border-radius: 20px;
+    padding: 10px 15px;
+}
+
+.navbar .btn-outline-light {
+    border-radius: 20px;
+    padding: 8px 20px;
+}
+
+/* Header Section */
+.head2 h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Button Container */
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.buttons button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    font-size: 1rem;
+    border-radius: 25px;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+    background-color: #0056b3;
+}
+
+/* Filter Section */
+.filter-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.filter-container .form-select {
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.filter-container .btn-primary {
+    border-radius: 25px;
+    padding: 10px 20px;
+}
+
+
+/* Slide-in Window for Add/Edit User */
+.slide-window {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    z-index: 20;
+}
+
+.slide-window.show {
+    right: 0;
+}
+
+.slide-window h4 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.slide-window .form-label {
+    font-weight: bold;
+}
+
+.slide-window .form-control {
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 12px 15px;
+}
+
+.slide-window .btn-primary {
+    width: 100%;
+    border-radius: 25px;
+    padding: 12px;
+    background-color: #007bff;
+    border: none;
+}
+
+.slide-window .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.close-btn {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    color: #007bff;
+}
+
+.close-btn:hover {
+    color: #0056b3;
+}
+
+/*Table styling*/
+tr.odd-row {
+    background-color: #f4f5f5a6 !important; /* Using !important to enforce the rule */
+}
+
+tr.even-row {
+    background-color: #ffffff !important;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table.dataTable thead th {
+    background-color: #f1f1f1;
+    color: #333;
+    font-weight: bold;
+}
+
+table tr:hover {
+    background-color: rgba(60, 16, 42, 0.868) !important;
+    color: white;
+    transform: scale(1.00); /* Slightly increase the row size */
+    transition: transform 0.2s ease, background-color 0.2s ease; /* Smooth transition */
+}
+
+table tr {
+    transition: transform 0.2s ease; /* Transition for row scaling */
+}
+
+.close-btn {
+    text-align: right;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    color: #007bff;
+  }
+  
+/*Scroll bars*/
+#datatable-container {
+    overflow-y: auto;
+    max-height: 400px;    /* Adjust height as needed */
+}
+
+#datatable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#datatable thead tr th{
+    position: sticky;
+}
+
+#datatable th {
+    position: sticky;
+    top: 0;
+    background-color: #03478b;    /* Same as navbar background for consistency */
+    color: white;
+    z-index: 1;    /* Make sure the header stays on top */
+}
+
+#datatable td{
+    word-wrap: break-word;
+    max-width: 500px;
+}
+
+#datatable td,
+#datatable th {
+    padding: 8px 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;    /* Prevent content from wrapping into multiple lines */
+    text-overflow: ellipsis;    /* Add ellipsis for overflow content */
+}
+
+#datatable  tbody  tr{
+    overflow-x: auto;
+}
+
+/* Tooltip styles */
+.tooltip-cell {
+    position: relative;
+}
+
+
+
+
